@@ -33,8 +33,8 @@ export default function HomePage() {
         <section className="platforms">
           <p>Supported AI platforms</p>
           <div className="logo-row" aria-label="Supported platforms">
-            {platforms.map((platform) => (
-              <span key={platform}>{platform}</span>
+            {[...platforms, ...platforms].map((platform, index) => (
+              <span key={`${platform}-${index}`}>{platform}</span>
             ))}
           </div>
         </section>
@@ -70,6 +70,48 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="section motion-showcase">
+          <div className="section-heading compact">
+            <p className="eyebrow">Live Escalations</p>
+            <h2>Feels like a short product video, built directly into the page.</h2>
+          </div>
+          <div className="showcase-grid">
+            <div className="terminal-loop" aria-label="Animated terminal escalation">
+              <div className="terminal-head">
+                <span>agent_worker.py</span>
+                <strong>Terminal</strong>
+              </div>
+              <div className="terminal-lines">
+                <span>41 async def process_batch(self, items):</span>
+                <span>42&nbsp;&nbsp;&nbsp;&nbsp;results = []</span>
+                <span>43&nbsp;&nbsp;&nbsp;&nbsp;for item in items:</span>
+                <span className="line-hot">44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parsed = data.response.json["data"]</span>
+                <span className="line-error">KeyError: "data"</span>
+                <span className="line-agent">[Agent] All retries failed. Requesting Porto...</span>
+              </div>
+              <div className="connecting">
+                <span />
+                <strong>Connecting engineer</strong>
+              </div>
+            </div>
+            <div className="expert-loop" aria-label="Animated expert match cards">
+              <div className="orbit orbit-a">UX</div>
+              <div className="orbit orbit-b">SE</div>
+              <div className="orbit orbit-c">GTM</div>
+              <div className="match-card">
+                <span className="pulse-dot" />
+                <p>Expert joined</p>
+                <h3>Maya · Staff engineer</h3>
+                <small>Sees files, logs, prior attempts, and constraints.</small>
+              </div>
+              <div className="solution-card">
+                <strong>Resolution pushed</strong>
+                <span>Agent context updated</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="section split">
           <div>
             <p className="eyebrow">Every Domain</p>
@@ -77,8 +119,13 @@ export default function HomePage() {
             <p>Porto covers knowledge-work problems that require taste, experience, accountability, or fresh context.</p>
           </div>
           <div className="domain-grid">
-            {domains.map((domain) => (
-              <article key={domain.title}>
+            {domains.map((domain, index) => (
+              <article className="domain-card-rich" key={domain.title}>
+                <div className={`domain-visual visual-${index + 1}`}>
+                  <span />
+                  <span />
+                  <span />
+                </div>
                 <h3>{domain.title}</h3>
                 <p>{domain.body}</p>
               </article>

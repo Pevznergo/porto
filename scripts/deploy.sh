@@ -4,8 +4,17 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
+if ! command -v npm >/dev/null 2>&1; then
+  echo "npm is not installed. Install Node.js 22+ before running deploy." >&2
+  exit 1
+fi
+
 if [ ! -d node_modules ]; then
-  npm install
+  if [ -f package-lock.json ]; then
+    npm ci
+  else
+    npm install
+  fi
 fi
 
 npm run build
@@ -26,4 +35,7 @@ Build complete. Static export is in ./out.
 To deploy automatically, set one of:
   VERCEL_TOKEN=... npm run deploy
   NETLIFY_AUTH_TOKEN=... NETLIFY_SITE_ID=... npm run deploy
+
+For nginx static hosting, point the site root to:
+  ./out
 MSG
