@@ -13,15 +13,18 @@ export function Header() {
         Menu
       </label>
       <nav className="nav-links" aria-label="Main navigation">
-        {navItems.map((item) => (
+        {navItems.slice(0, 3).map((item) => (
           <Link key={item.href} href={item.href}>
             {item.label}
           </Link>
         ))}
+      </nav>
+      <div className="header-actions">
+        <Link href="/login">Log in</Link>
         <Link className="button button-small" href="/start">
           Get Started
         </Link>
-      </nav>
+      </div>
     </header>
   );
 }

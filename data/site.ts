@@ -5,46 +5,73 @@ export const navItems = [
   { href: "/login", label: "Log in" }
 ];
 
-export const platforms = ["Claude Code", "Codex", "Cursor", "Lovable", "Replit", "Any MCP"];
+export const platforms = ["Claude Code", "OpenClaw", "Codex", "Lovable", "Cursor", "Cowork"];
+
+export const workflowSteps = [
+  {
+    number: "Step 01",
+    title: "Agent Gets Stuck",
+    body: "The agent reaches a bug, review, product decision, or ambiguous workflow it cannot finish with confidence."
+  },
+  {
+    number: "Step 02",
+    title: "Expert Matched",
+    body: "Porto routes the request to a vetted specialist with the right skill, context, timezone, and availability."
+  },
+  {
+    number: "Step 03",
+    title: "Expert Solves It",
+    body: "The expert sees the relevant files, logs, prior attempts, and constraints, then gives the agent a concrete answer."
+  },
+  {
+    number: "Step 04",
+    title: "Agent Keeps Going",
+    body: "The solution returns to the agent context so the workflow continues without a manual handoff."
+  }
+];
 
 export const domains = [
   {
     title: "Software Engineering",
-    body: "Debug loops, architecture reviews, migrations, production incidents, and test failures."
+    body: "A senior engineer diagnoses stuck builds, failing tests, migrations, architecture loops, and production edge cases."
+  },
+  {
+    title: "Product & Business Strategy",
+    body: "A strategist sharpens positioning, pricing, launch plans, customer research, and go-to-market choices."
+  },
+  {
+    title: "Marketing & Copy",
+    body: "A brand operator rewrites weak AI copy into specific, differentiated messaging that sounds like your company."
   },
   {
     title: "Design & UX",
-    body: "Flow critique, interface polish, accessibility, product taste, and conversion issues."
+    body: "A designer restructures flows, hierarchy, interaction details, and visual polish when the agent misses taste."
   },
   {
-    title: "Strategy & GTM",
-    body: "Positioning, pricing, sales motion, competitive research, and launch planning."
+    title: "Operations & Finance",
+    body: "An operator reviews reconciliations, vendor workflows, forecasts, compliance paths, and recurring process issues."
   },
   {
-    title: "Finance & Ops",
-    body: "Forecasting, reconciliation, vendor workflows, compliance checks, and operating models."
+    title: "Your Domain",
+    body: "Whatever your agent is working on, Porto can bring in a vetted human with the domain judgment it needs."
   }
 ];
 
-export const workflowSteps = [
+export const capabilityCards = [
   {
-    number: "01",
-    title: "Agent gets blocked",
-    body: "The workflow hits a bug, edge case, design decision, policy review, or business question it cannot resolve confidently."
+    title: "Verified & Vetted Experts",
+    body: "Identity-verified, skill-assessed, domain-tested specialists. No random marketplace roulette."
   },
   {
-    number: "02",
-    title: "Porto matches the right expert",
-    body: "Skills, urgency, context, and availability are used to route the request to a verified specialist."
+    title: "Every Domain, Every Timezone",
+    body: "Experts across engineering, design, marketing, strategy, finance, operations, research, and more."
   },
   {
-    number: "03",
-    title: "Expert works in context",
-    body: "The specialist sees the agent trace, files, prior attempts, and constraints, then responds with concrete guidance."
+    title: "Plug & Play Integration",
+    body: "One MCP server or API call gives agents a human escalation path in under a minute."
   },
   {
-    number: "04",
-    title: "Agent continues",
-    body: "The expert answer returns to the agent context so the task continues without a manual handoff."
+    title: "Seamless Context Handoff",
+    body: "Files, logs, errors, prior attempts, and instructions move with the request so experts start with context."
   }
 ];

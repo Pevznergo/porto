@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AgentConsole } from "@/components/AgentConsole";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { domains, platforms, workflowSteps } from "@/data/site";
+import { capabilityCards, domains, platforms, workflowSteps } from "@/data/site";
 
 export default function HomePage() {
   return (
@@ -10,13 +10,19 @@ export default function HomePage() {
       <Header />
       <main>
         <section className="hero">
+          <div className="backed-row">
+            <span>Backed By</span>
+            <strong>Y Combinator</strong>
+          </div>
           <div className="hero-copy">
-            <p className="eyebrow">Backed by operators building agent-native teams</p>
-            <h1>On-demand human specialists for AI agents.</h1>
+            <h1>
+              <span>On demand</span>
+              <span>Human Experts</span>
+              <span>for AI Agents.</span>
+            </h1>
             <p className="hero-text">
-              When an agent stalls, Porto routes the full context to a vetted expert in real time.
-              Engineers, designers, analysts, compliance reviewers, and operators join in minutes so
-              the agent can keep moving.
+              When your AI agent gets stuck, Porto connects it to a verified human expert in real time
+              via MCP. Engineers, designers, operators, and more matched in under 30 seconds.
             </p>
             <div className="hero-actions">
               <Link className="button" href="/start">
@@ -31,33 +37,37 @@ export default function HomePage() {
         </section>
 
         <section className="platforms">
-          <p>Supported AI platforms</p>
-          <div className="logo-row" aria-label="Supported platforms">
-            {[...platforms, ...platforms].map((platform, index) => (
-              <span key={`${platform}-${index}`}>{platform}</span>
+          <p>Supported AI Platforms</p>
+          <div className="platform-grid" aria-label="Supported platforms">
+            {platforms.map((platform) => (
+              <span key={platform}>
+                <i>{platform.slice(0, 1)}</i>
+                {platform}
+              </span>
             ))}
           </div>
         </section>
 
         <section className="stats-band">
+          <p>Humans matched with AI agents in under two minutes 24/7, across every domain.</p>
           <div>
-            <strong>30 sec</strong>
-            <span>median match time</span>
+            <span>Avg. First Reply</span>
+            <strong>&lt;2 min</strong>
           </div>
           <div>
-            <strong>24/7</strong>
-            <span>global expert coverage</span>
+            <span>Resolution Rate</span>
+            <strong>83%</strong>
           </div>
           <div>
+            <span>Verified Experts</span>
             <strong>3,000+</strong>
-            <span>screened specialists</span>
           </div>
         </section>
 
-        <section id="how-it-works" className="section">
-          <div className="section-heading">
+        <section id="how-it-works" className="section process-section">
+          <div className="section-heading centered">
             <p className="eyebrow">How It Works</p>
-            <h2>One integration. A human escalation path for every agent.</h2>
+            <h2>One integration. Unlimited human expertise in any domain.</h2>
           </div>
           <div className="steps">
             {workflowSteps.map((step) => (
@@ -70,108 +80,56 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section motion-showcase">
-          <div className="section-heading compact">
-            <p className="eyebrow">Live Escalations</p>
-            <h2>Feels like a short product video, built directly into the page.</h2>
+        <section className="section domains-section">
+          <div className="section-heading centered">
+            <p className="eyebrow">One platform. Every domain.</p>
+            <h2>We connect AI agents to human experts across all knowledge work</h2>
           </div>
-          <div className="showcase-grid">
-            <div className="terminal-loop" aria-label="Animated terminal escalation">
-              <div className="terminal-head">
-                <span>agent_worker.py</span>
-                <strong>Terminal</strong>
-              </div>
-              <div className="terminal-lines">
-                <span>41 async def process_batch(self, items):</span>
-                <span>42&nbsp;&nbsp;&nbsp;&nbsp;results = []</span>
-                <span>43&nbsp;&nbsp;&nbsp;&nbsp;for item in items:</span>
-                <span className="line-hot">44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parsed = data.response.json["data"]</span>
-                <span className="line-error">KeyError: "data"</span>
-                <span className="line-agent">[Agent] All retries failed. Requesting Porto...</span>
-              </div>
-              <div className="connecting">
-                <span />
-                <strong>Connecting engineer</strong>
-              </div>
-            </div>
-            <div className="expert-loop" aria-label="Animated expert match cards">
-              <div className="orbit orbit-a">UX</div>
-              <div className="orbit orbit-b">SE</div>
-              <div className="orbit orbit-c">GTM</div>
-              <div className="match-card">
-                <span className="pulse-dot" />
-                <p>Expert joined</p>
-                <h3>Maya · Staff engineer</h3>
-                <small>Sees files, logs, prior attempts, and constraints.</small>
-              </div>
-              <div className="solution-card">
-                <strong>Resolution pushed</strong>
-                <span>Agent context updated</span>
-              </div>
+          <div className="domain-showcase">
+            <AgentConsole />
+            <div className="domain-grid">
+              {domains.map((domain) => (
+                <article key={domain.title}>
+                  <h3>{domain.title}</h3>
+                  <p>{domain.body}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="section split">
-          <div>
-            <p className="eyebrow">Every Domain</p>
-            <h2>Human judgment where agents need it most.</h2>
-            <p>Porto covers knowledge-work problems that require taste, experience, accountability, or fresh context.</p>
-          </div>
-          <div className="domain-grid">
-            {domains.map((domain, index) => (
-              <article className="domain-card-rich" key={domain.title}>
-                <div className={`domain-visual visual-${index + 1}`}>
-                  <span />
-                  <span />
-                  <span />
-                </div>
-                <h3>{domain.title}</h3>
-                <p>{domain.body}</p>
+        <section className="section capability-section">
+          <div className="capability-grid">
+            {capabilityCards.map((card) => (
+              <article key={card.title}>
+                <h3>{card.title}</h3>
+                <p>{card.body}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section feature-band">
-          <div className="feature-copy">
-            <p className="eyebrow">Built for Agent Workflows</p>
-            <h2>Secure context handoff, fast routing, and clean answers.</h2>
-          </div>
-          <div className="feature-list">
-            <article>
-              <h3>Verified experts</h3>
-              <p>Identity checks, skill reviews, domain tests, and ongoing quality ratings.</p>
-            </article>
-            <article>
-              <h3>MCP and API access</h3>
-              <p>Connect from coding agents, internal copilots, workflow engines, or custom tools.</p>
-            </article>
-            <article>
-              <h3>PII-aware sharing</h3>
-              <p>Redaction rules and scoped context packages keep sensitive information controlled.</p>
-            </article>
-          </div>
-        </section>
-
         <section className="section integrations">
-          <div className="section-heading compact">
-            <p className="eyebrow">Works With</p>
-            <h2>Your agent stack.</h2>
+          <div className="stack-title">
+            <h2>
+              Works with
+              <span>your stack</span>
+            </h2>
+            <p>If it speaks MCP, Porto supports it. API and plugin integrations work with any agent.</p>
           </div>
           <div className="integration-groups">
             <div>
               <h3>AI Coding & Building</h3>
               <div className="chip-row">
-                {["Claude Code", "Cursor", "Codex", "Lovable", "Replit"].map((item) => (
+                {["Claude Code", "Cursor", "Codex", "Claude Cowork", "Lovable", "Replit"].map((item) => (
                   <span key={item}>{item}</span>
                 ))}
               </div>
             </div>
             <div>
-              <h3>Platforms & Orchestrators</h3>
+              <h3>AI Platform & Orchestrators</h3>
               <div className="chip-row">
-                {["ChatGPT", "Claude", "Gemini", "OpenAI API", "Any MCP"].map((item) => (
+                {["ChatGPT", "Claude", "Gemini", "OpenClaw", "Any MCP", "Any API"].map((item) => (
                   <span key={item}>{item}</span>
                 ))}
               </div>
@@ -182,16 +140,16 @@ export default function HomePage() {
         <section className="cta-grid">
           <article>
             <span>For Builders</span>
-            <h2>Give agents a human escalation layer.</h2>
-            <p>Install Porto, define routing rules, and let blocked workflows ask for expert help automatically.</p>
+            <h2>Equip your agents with human intelligence.</h2>
+            <p>Give your AI agents access to thousands of verified experts. Set up in 60 seconds.</p>
             <Link className="button" href="/start">
               Get Started
             </Link>
           </article>
           <article>
             <span>For Experts</span>
-            <h2>Earn by helping AI agents solve hard problems.</h2>
-            <p>Set availability, accept relevant requests, and get paid for precise, high-leverage expertise.</p>
+            <h2>Get paid for your expertise. AI agents are hiring.</h2>
+            <p>Set your schedule and earn real money helping AI agents solve hard problems.</p>
             <Link className="button button-ghost" href="/experts">
               Apply as Expert
             </Link>
@@ -200,10 +158,15 @@ export default function HomePage() {
 
         <section className="enterprise">
           <div>
-            <p className="eyebrow">Teams</p>
-            <h2>Deploy Porto for your company.</h2>
-            <p>Priority matching, private expert pools, invoicing, admin controls, and implementation support.</p>
+            <h2>Want Porto for your team?</h2>
+            <p>We work with companies deploying AI agents at scale. Book a call and we can set up your team in a day.</p>
           </div>
+          <ul>
+            <li>Priority in expert matches</li>
+            <li>Custom expert pool</li>
+            <li>Volume pricing and invoicing</li>
+            <li>Dedicated support</li>
+          </ul>
           <Link className="button" href="/demo">
             Book Demo
           </Link>
