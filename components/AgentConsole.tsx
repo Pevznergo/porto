@@ -6,14 +6,51 @@ export function AgentConsole() {
         <span>Chat</span>
       </div>
       <div className="agent-stage" aria-hidden="true">
-        <div className="expert-joined">
-          <div className="expert-avatar">
-            <span>N</span>
+        <div className="radar-panel">
+          <div className="radar-orbit radar-orbit-1" />
+          <div className="radar-orbit radar-orbit-2" />
+          <div className="radar-sweep" />
+          <div className="radar-core">
+            <span>Finding experts</span>
+            <strong>Security · 3 live matches</strong>
           </div>
-          <div>
-            <p>Expert joined</p>
-            <strong>Nolan · Security engineer</strong>
-            <span>Live on Porto</span>
+          <div className="candidate-card candidate-card-a">
+            <span className="candidate-dot" />
+            <div>
+              <strong>Nolan</strong>
+              <span>Security engineer</span>
+            </div>
+            <em>+12s</em>
+          </div>
+          <div className="candidate-card candidate-card-b">
+            <span className="candidate-dot" />
+            <div>
+              <strong>Priya</strong>
+              <span>Platform engineer</span>
+            </div>
+            <em>+19s</em>
+          </div>
+          <div className="candidate-card candidate-card-c">
+            <span className="candidate-dot" />
+            <div>
+              <strong>Mateo</strong>
+              <span>Incident response</span>
+            </div>
+            <em>+24s</em>
+          </div>
+        </div>
+        <div className="chat-stream">
+          <div className="chat-bubble chat-bubble-agent">
+            <span>Need help now.</span>
+            <p>Route me to the best security engineer and keep the chat open.</p>
+          </div>
+          <div className="chat-bubble chat-bubble-system">
+            <span>Porto</span>
+            <p>Searching your pool, ranking by expertise and response time.</p>
+          </div>
+          <div className="chat-bubble chat-bubble-expert">
+            <span>Nolan joined</span>
+            <p>I&apos;m in. I can review the incident and stay in the thread.</p>
           </div>
         </div>
       </div>
