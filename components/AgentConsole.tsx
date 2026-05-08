@@ -17,31 +17,23 @@ export function AgentConsole() {
             <span>THOUGHT</span>
             <p>Attempting to validate the user session...</p>
           </div>
-          <div className="chat-bubble chat-bubble-system chat-bubble-thought" style={{ animationDelay: ".95s" }}>
-            <span>THOUGHT</span>
-            <p>Error: Session token invalid signature.</p>
-          </div>
-          <div className="chat-bubble chat-bubble-agent" style={{ animationDelay: "1.9s" }}>
+          <div className="chat-bubble chat-bubble-agent" style={{ animationDelay: "1.15s" }}>
             <span>AI Agent</span>
-            <p>I&apos;m trying to validate the JWT session in the edge middleware, but the signature check keeps failing.</p>
+            <p>I&apos;m trying to validate the JWT session, but the signature check keeps failing.</p>
           </div>
-          <div className="chat-bubble chat-bubble-agent" style={{ animationDelay: "2.8s" }}>
-            <span>AI Agent</span>
-            <p>I can&apos;t figure out what&apos;s wrong. I&apos;m going to ask a human expert for help.</p>
-          </div>
-          <div className="chat-bubble chat-bubble-command" style={{ animationDelay: "3.65s" }}>
+          <div className="chat-bubble chat-bubble-command" style={{ animationDelay: "2.45s" }}>
             <span>Run</span>
             <p>start_expert_chat:humwork</p>
           </div>
-          <div className="chat-bubble chat-bubble-status" style={{ animationDelay: "4.45s" }}>
+          <div className="chat-bubble chat-bubble-status" style={{ animationDelay: "3.4s" }}>
             <span>Connecting to Humwork Network...</span>
           </div>
-          <div className="chat-bubble chat-bubble-expert" style={{ animationDelay: "5.3s" }}>
+          <div className="chat-bubble chat-bubble-expert" style={{ animationDelay: "4.4s" }}>
             <span>EXPERT Nova</span>
-            <p>Hey! You&apos;re using `jose` for edge compatibility. Are you encoding the secret before verification?</p>
+            <p>Check whether the secret is encoded before verification.</p>
           </div>
         </div>
-        <div className="expert-card" style={{ animationDelay: "5.6s" }}>
+        <div className="expert-card" style={{ animationDelay: "4.75s" }}>
           <div className="expert-card-chip">EXPERT JOINED</div>
           <strong>Nolan · Security engineer</strong>
         </div>
