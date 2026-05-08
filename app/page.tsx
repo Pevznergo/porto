@@ -2,13 +2,7 @@ import Link from "next/link";
 import { AgentConsole } from "@/components/AgentConsole";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { capabilityCards, domains, platforms, workflowSteps } from "@/data/site";
-
-const liveSignals = [
-  { value: "<60s", label: "to first match" },
-  { value: "24/7", label: "live coverage" },
-  { value: "1 MCP", label: "or API call" }
-];
+import { capabilityCards, domains, workflowSteps } from "@/data/site";
 
 export default function HomePage() {
   return (
@@ -38,14 +32,6 @@ export default function HomePage() {
                 Join as Expert
               </Link>
             </div>
-            <div className="hero-metrics">
-              {liveSignals.map((signal) => (
-                <div key={signal.label}>
-                  <strong>{signal.value}</strong>
-                  <span>{signal.label}</span>
-                </div>
-              ))}
-            </div>
           </div>
           <div className="hero-visual">
             <AgentConsole />
@@ -54,34 +40,6 @@ export default function HomePage() {
               <strong>Security · Nolan · joined 18s ago</strong>
               <span>Agent keeps typing while expert takes over</span>
             </div>
-          </div>
-        </section>
-
-        <section className="platforms signal-strip">
-          <p>Supported AI Platforms</p>
-          <div className="platform-grid" aria-label="Supported platforms">
-            {platforms.map((platform) => (
-              <span key={platform}>
-                <i>{platform.slice(0, 1)}</i>
-                {platform}
-              </span>
-            ))}
-          </div>
-        </section>
-
-        <section className="stats-band stats-band-story">
-          <p>Human answers land fast, with the context already attached.</p>
-          <div>
-            <span>Avg. first reply</span>
-            <strong>&lt;60s</strong>
-          </div>
-          <div>
-            <span>Match rate</span>
-            <strong>93%</strong>
-          </div>
-          <div>
-            <span>Verified experts</span>
-            <strong>3,000+</strong>
           </div>
         </section>
 
@@ -171,34 +129,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section integrations integrations-story">
-          <div className="stack-title">
-            <h2>
-              Works with
-              <span>your stack</span>
-            </h2>
-            <p>Speak MCP or API. Porto sits in the middle and keeps the work moving.</p>
-          </div>
-          <div className="integration-groups">
-            <div>
-              <h3>AI Coding & Building</h3>
-              <div className="chip-row">
-                {["Claude Code", "Cursor", "Codex", "Claude Cowork", "Lovable", "Replit"].map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3>AI Platform & Orchestrators</h3>
-              <div className="chip-row">
-                {["ChatGPT", "Claude", "Gemini", "OpenClaw", "Any MCP", "Any API"].map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section className="cta-grid cta-grid-story">
           <article>
             <span>Plug & Play Integration</span>
@@ -218,7 +148,6 @@ export default function HomePage() {
           </article>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
