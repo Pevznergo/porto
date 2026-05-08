@@ -88,12 +88,11 @@ export default function HomePage() {
         <section className="section signal-section">
           <div className="section-heading split">
             <div>
-              <p className="eyebrow">What Porto does</p>
-              <h2>Match a human, keep the context, return the answer.</h2>
+              <p className="eyebrow">How It Works</p>
+              <h2>One integration. Human expertise on demand.</h2>
             </div>
             <p className="section-note">
-              A good landing page should feel like the product. Here, the product is a search, a match, a
-              handoff, and a return to work.
+              The page should show the motion: stuck, search, match, continue.
             </p>
           </div>
           <div className="signal-grid">
@@ -103,28 +102,6 @@ export default function HomePage() {
                 <h3>{step.title}</h3>
                 <p>{step.body}</p>
                 <div className="signal-line" />
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="how-it-works" className="section process-section">
-          <div className="section-heading split">
-            <div>
-              <p className="eyebrow">How it works</p>
-              <h2>One integration. Human expertise on demand.</h2>
-            </div>
-            <p className="section-note">
-              The page should not make people think about the shape of the business. It should show the
-              motion of the workflow: stuck, search, match, continue.
-            </p>
-          </div>
-          <div className="timeline">
-            {workflowSteps.map((step) => (
-              <article key={step.number}>
-                <span>{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
               </article>
             ))}
           </div>
@@ -152,12 +129,11 @@ export default function HomePage() {
         <section className="section domains-section">
           <div className="section-heading split">
             <div>
-              <p className="eyebrow">Every domain</p>
-              <h2>Bring in the right person for the problem in front of you.</h2>
+              <p className="eyebrow">Verified & Vetted Experts</p>
+              <h2>Every domain, every timezone.</h2>
             </div>
             <p className="section-note">
-              The taxonomy can be broad. The visual language should stay focused: show the match, not a wall
-              of features.
+              Identity-checked experts across engineering, design, strategy, finance, and ops.
             </p>
           </div>
           <div className="domain-showcase">
@@ -178,12 +154,11 @@ export default function HomePage() {
         <section className="section capability-section">
           <div className="section-heading split">
             <div>
-              <p className="eyebrow">Why it works</p>
-              <h2>Porto feels like an escalation path, not a marketplace.</h2>
+              <p className="eyebrow">Plug & Play Integration</p>
+              <h2>Seamless context handoff.</h2>
             </div>
             <p className="section-note">
-              Keep the first screen readable, then give the page enough motion and structure that people can
-              understand the product without reading a wall of copy.
+              One MCP or API call keeps the whole thread intact when the agent needs a human.
             </p>
           </div>
           <div className="capability-grid">
@@ -226,37 +201,21 @@ export default function HomePage() {
 
         <section className="cta-grid cta-grid-story">
           <article>
-            <span>For Builders</span>
-            <h2>Give your agents a human fallback.</h2>
-            <p>One API call gets you context-aware expert help when the model stalls.</p>
+            <span>Plug & Play Integration</span>
+            <h2>One MCP or API. No extra glue.</h2>
+            <p>Connect once and route agent blockers to humans without rebuilding your workflow.</p>
             <Link className="button" href="/start">
               Get Started
             </Link>
           </article>
           <article>
-            <span>For Experts</span>
-            <h2>Work with agents, not generic clients.</h2>
-            <p>Set your schedule and get paid for the exact kind of judgment agents need.</p>
+            <span>Seamless Context Handoff</span>
+            <h2>Files, logs, and errors move with the request.</h2>
+            <p>No re-explaining, no copy-paste, no lost context between the agent and the expert.</p>
             <Link className="button button-ghost" href="/experts">
-              Apply as Expert
+              Join as Expert
             </Link>
           </article>
-        </section>
-
-        <section className="enterprise enterprise-story">
-          <div>
-            <h2>Need Porto for a team or product?</h2>
-            <p>We work with teams shipping agents at scale. Book a call and we can set it up in a day.</p>
-          </div>
-          <ul>
-            <li>Priority in expert matches</li>
-            <li>Custom expert pool</li>
-            <li>Volume pricing and invoicing</li>
-            <li>Dedicated support</li>
-          </ul>
-          <Link className="button" href="/demo">
-            Book Demo
-          </Link>
         </section>
       </main>
       <Footer />

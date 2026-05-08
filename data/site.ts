@@ -9,69 +9,53 @@ export const platforms = ["Claude Code", "OpenClaw", "Codex", "Lovable", "Cursor
 
 export const workflowSteps = [
   {
-    number: "Step 01",
-    title: "Agent hits a wall",
-    body: "A bug, review, or decision needs a human answer now."
+    number: "STEP 01",
+    title: "Agent Gets Stuck",
+    body: "The agent hits a wall and needs help now."
   },
   {
-    number: "Step 02",
-    title: "Best expert appears",
-    body: "Porto ranks by skill, context, and response time."
+    number: "STEP 02",
+    title: "Expert Matched",
+    body: "Porto finds the right verified human fast."
   },
   {
-    number: "Step 03",
-    title: "Context stays attached",
-    body: "Files, logs, and prior attempts move with the request."
+    number: "STEP 03",
+    title: "Expert Solves It",
+    body: "The expert sees the full context and fixes the issue."
   },
   {
-    number: "Step 04",
-    title: "Work continues",
-    body: "The answer returns to the agent and the thread stays open."
+    number: "STEP 04",
+    title: "Agent Keeps Going",
+    body: "The solution goes back into the thread and work continues."
   }
 ];
 
 export const domains = [
   {
-    title: "Software engineering",
-    body: "A senior engineer handles broken builds, failing tests, migrations, and release risk."
+    title: "Verified & Vetted Experts",
+    body: "Every expert is identity-checked and domain-tested before joining."
   },
   {
-    title: "Product & strategy",
-    body: "A strategist sharpens pricing, positioning, and launch calls."
-  },
-  {
-    title: "Marketing & copy",
-    body: "A brand operator rewrites weak AI text into something specific."
-  },
-  {
-    title: "Design & UX",
-    body: "A designer fixes hierarchy, flows, and interaction taste."
-  },
-  {
-    title: "Operations & finance",
-    body: "An operator reviews workflows, forecasts, and recurring process issues."
-  },
-  {
-    title: "Your domain",
-    body: "Whatever your agent is doing, Porto can pull in the right human."
+    title: "Every Domain, Every Timezone",
+    body: "Engineering, design, strategy, finance, marketing, ops, and more."
   }
 ];
 
 export const capabilityCards = [
   {
-    title: "Verified experts",
-    body: "Identity-checked specialists with domain judgment, not marketplace noise."
+    title: "Plug & Play Integration",
+    body: "One MCP or API call connects your agent to a live human pool."
   },
   {
-    title: "Every timezone",
-    body: "Coverage across engineering, design, strategy, finance, ops, and research."
+    title: "Seamless Context Handoff",
+    body: "Files, logs, errors, and attempts stay attached to the request."
   },
   {
-    title: "One integration",
-    body: "MCP or API gives agents a human escalation path in under a minute."
+    title: "Fast, Live Matching",
+    body: "The best expert appears in seconds, not after a long search."
   },
   {
-    title: "Context handoff",
-    body: "Files, logs, errors, and prior attempts move with the request."
+    title: "Keep the Thread Alive",
+    body: "The answer lands back in the workflow and the agent keeps moving."
   }
 ];
