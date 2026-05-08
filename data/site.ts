@@ -10,68 +10,68 @@ export const platforms = ["Claude Code", "OpenClaw", "Codex", "Lovable", "Cursor
 export const workflowSteps = [
   {
     number: "Step 01",
-    title: "Agent Gets Stuck",
-    body: "The agent reaches a bug, review, product decision, or ambiguous workflow it cannot finish with confidence."
+    title: "Agent hits a wall",
+    body: "A bug, review, or decision needs a human answer now."
   },
   {
     number: "Step 02",
-    title: "Expert Matched",
-    body: "Porto routes the request to a vetted specialist with the right skill, context, timezone, and availability."
+    title: "Best expert appears",
+    body: "Porto ranks by skill, context, and response time."
   },
   {
     number: "Step 03",
-    title: "Expert Solves It",
-    body: "The expert sees the relevant files, logs, prior attempts, and constraints, then gives the agent a concrete answer."
+    title: "Context stays attached",
+    body: "Files, logs, and prior attempts move with the request."
   },
   {
     number: "Step 04",
-    title: "Agent Keeps Going",
-    body: "The solution returns to the agent context so the workflow continues without a manual handoff."
+    title: "Work continues",
+    body: "The answer returns to the agent and the thread stays open."
   }
 ];
 
 export const domains = [
   {
-    title: "Software Engineering",
-    body: "A senior engineer diagnoses stuck builds, failing tests, migrations, architecture loops, and production edge cases."
+    title: "Software engineering",
+    body: "A senior engineer handles broken builds, failing tests, migrations, and release risk."
   },
   {
-    title: "Product & Business Strategy",
-    body: "A strategist sharpens positioning, pricing, launch plans, customer research, and go-to-market choices."
+    title: "Product & strategy",
+    body: "A strategist sharpens pricing, positioning, and launch calls."
   },
   {
-    title: "Marketing & Copy",
-    body: "A brand operator rewrites weak AI copy into specific, differentiated messaging that sounds like your company."
+    title: "Marketing & copy",
+    body: "A brand operator rewrites weak AI text into something specific."
   },
   {
     title: "Design & UX",
-    body: "A designer restructures flows, hierarchy, interaction details, and visual polish when the agent misses taste."
+    body: "A designer fixes hierarchy, flows, and interaction taste."
   },
   {
-    title: "Operations & Finance",
-    body: "An operator reviews reconciliations, vendor workflows, forecasts, compliance paths, and recurring process issues."
+    title: "Operations & finance",
+    body: "An operator reviews workflows, forecasts, and recurring process issues."
   },
   {
-    title: "Your Domain",
-    body: "Whatever your agent is working on, Porto can bring in a vetted human with the domain judgment it needs."
+    title: "Your domain",
+    body: "Whatever your agent is doing, Porto can pull in the right human."
   }
 ];
 
 export const capabilityCards = [
   {
-    title: "Verified & Vetted Experts",
-    body: "Identity-verified, skill-assessed, domain-tested specialists. No random marketplace roulette."
+    title: "Verified experts",
+    body: "Identity-checked specialists with domain judgment, not marketplace noise."
   },
   {
-    title: "Every Domain, Every Timezone",
-    body: "Experts across engineering, design, marketing, strategy, finance, operations, research, and more."
+    title: "Every timezone",
+    body: "Coverage across engineering, design, strategy, finance, ops, and research."
   },
   {
-    title: "Plug & Play Integration",
-    body: "One MCP server or API call gives agents a human escalation path in under a minute."
+    title: "One integration",
+    body: "MCP or API gives agents a human escalation path in under a minute."
   },
   {
-    title: "Seamless Context Handoff",
-    body: "Files, logs, errors, prior attempts, and instructions move with the request so experts start with context."
+    title: "Context handoff",
+    body: "Files, logs, errors, and prior attempts move with the request."
   }
 ];

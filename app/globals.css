@@ -1173,6 +1173,340 @@ textarea {
   font-size: clamp(1.45rem, 3vw, 2.2rem);
 }
 
+.hero-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(440px, 1.05fr);
+  align-items: stretch;
+  gap: clamp(28px, 4vw, 54px);
+  padding-top: clamp(84px, 8vw, 126px);
+}
+
+.hero-story::before {
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(0, 0, 0, .04);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .72), rgba(255, 255, 255, 0)),
+    radial-gradient(circle at 86% 18%, rgba(66, 213, 229, .08), transparent 22%),
+    radial-gradient(circle at 20% 88%, rgba(255, 90, 20, .06), transparent 24%);
+  content: "";
+  pointer-events: none;
+}
+
+.hero-copy-story {
+  max-width: 630px;
+}
+
+.hero-visual {
+  position: relative;
+  display: grid;
+  align-items: start;
+  min-height: 100%;
+}
+
+.hero-visual .agent-console {
+  min-height: 100%;
+}
+
+.hero-ribbon {
+  position: absolute;
+  right: 22px;
+  left: 22px;
+  bottom: 18px;
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, .08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .9);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, .08);
+  backdrop-filter: blur(12px);
+}
+
+.hero-ribbon span {
+  color: #7a7a75;
+  font-size: .8rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.hero-ribbon strong {
+  color: #2a2a2c;
+  font-size: .98rem;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hero-metrics div {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .8);
+}
+
+.hero-metrics strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.hero-metrics span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.signal-strip {
+  position: relative;
+  padding-top: 34px;
+}
+
+.signal-strip::before,
+.stats-band-story::before,
+.integrations-story::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, .14), transparent);
+  content: "";
+}
+
+.stats-band-story {
+  position: relative;
+  margin-top: 40px;
+}
+
+.signal-section,
+.process-section,
+.radar-story,
+.domains-section,
+.capability-section,
+.integrations-story,
+.cta-grid-story,
+.enterprise-story {
+  position: relative;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .74fr);
+  gap: 28px;
+  align-items: end;
+}
+
+.section-note {
+  max-width: 440px;
+  margin: 0;
+  color: #7d7d78;
+  font-size: 1.03rem;
+  line-height: 1.55;
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.signal-card {
+  position: relative;
+  min-height: 220px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(66, 213, 229, .12), transparent 38%),
+    linear-gradient(180deg, #fff, #f8f8f6);
+  overflow: hidden;
+}
+
+.signal-card span {
+  display: block;
+  color: #8a8a85;
+  font-size: .84rem;
+  font-weight: 760;
+  text-transform: uppercase;
+}
+
+.signal-card h3 {
+  margin-top: 18px;
+  font-size: 1.28rem;
+}
+
+.signal-card p {
+  max-width: 28ch;
+  font-size: .98rem;
+  line-height: 1.5;
+}
+
+.signal-line {
+  position: absolute;
+  right: -18%;
+  bottom: -30px;
+  width: 78%;
+  height: 78%;
+  border-radius: 999px;
+  border: 1px solid rgba(66, 213, 229, .18);
+  border-top-color: rgba(255, 90, 20, .18);
+  opacity: .65;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.timeline article {
+  min-height: 240px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+}
+
+.timeline span {
+  display: block;
+  margin-bottom: 28px;
+  color: #8a8a85;
+  font-size: .84rem;
+  font-weight: 760;
+}
+
+.radar-story {
+  display: grid;
+  grid-template-columns: minmax(0, .76fr) minmax(0, 1.24fr);
+  gap: 28px;
+  align-items: center;
+}
+
+.radar-copy {
+  max-width: 460px;
+}
+
+.radar-copy p {
+  font-size: 1.04rem;
+  line-height: 1.56;
+}
+
+.radar-copy ul {
+  margin: 20px 0 0;
+  padding-left: 18px;
+  color: var(--ink);
+}
+
+.radar-copy li {
+  margin-bottom: 10px;
+}
+
+.radar-scene .agent-console {
+  min-height: 640px;
+}
+
+.domain-spotlight .agent-console {
+  min-height: 560px;
+}
+
+.domain-showcase {
+  display: grid;
+  grid-template-columns: minmax(360px, .92fr) minmax(0, 1.08fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.domain-grid article {
+  min-height: 180px;
+  padding: 24px;
+}
+
+.domain-grid article:first-child {
+  min-height: 240px;
+}
+
+.capability-grid article {
+  min-height: 220px;
+}
+
+.integrations-story {
+  display: grid;
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
+  gap: 52px;
+  align-items: start;
+}
+
+.cta-grid-story {
+  gap: 16px;
+}
+
+.cta-grid-story article {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-grid-story article::after {
+  position: absolute;
+  inset: auto -12% -24% auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(66, 213, 229, .12), transparent 62%);
+  content: "";
+  pointer-events: none;
+}
+
+.enterprise-story {
+  grid-template-columns: minmax(0, 1fr) minmax(240px, .8fr) auto;
+}
+
+@media (max-width: 1060px) {
+  .hero-story,
+  .split,
+  .radar-story,
+  .domain-showcase,
+  .integrations-story,
+  .enterprise-story {
+    grid-template-columns: 1fr;
+  }
+
+  .signal-grid,
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-story {
+    gap: 18px;
+  }
+
+  .hero-metrics,
+  .signal-grid,
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-ribbon {
+    position: static;
+    margin-top: 14px;
+  }
+
+  .hero-visual .agent-console,
+  .radar-scene .agent-console,
+  .domain-spotlight .agent-console {
+    min-height: 520px;
+  }
+}
+
 .notice {
   padding: 16px;
   border: 1px solid var(--line);

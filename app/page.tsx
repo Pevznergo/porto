@@ -4,25 +4,32 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { capabilityCards, domains, platforms, workflowSteps } from "@/data/site";
 
+const liveSignals = [
+  { value: "<60s", label: "to first match" },
+  { value: "24/7", label: "live coverage" },
+  { value: "1 MCP", label: "or API call" }
+];
+
 export default function HomePage() {
   return (
     <>
       <Header />
       <main>
-        <section className="hero">
-          <div className="backed-row">
-            <span>Backed By</span>
-            <strong>Y Combinator</strong>
-          </div>
-          <div className="hero-copy">
+        <section className="hero hero-story">
+          <div className="hero-copy hero-copy-story">
+            <div className="backed-row">
+              <span>Backed by</span>
+              <strong>Y Combinator</strong>
+            </div>
+            <p className="eyebrow">Human help for agent work</p>
             <h1>
-              <span>On demand</span>
-              <span>Human Experts</span>
-              <span>for AI Agents.</span>
+              <span>When the agent stalls,</span>
+              <span>Porto finds a human</span>
+              <span>and keeps the thread alive.</span>
             </h1>
             <p className="hero-text">
-              When your AI agent gets stuck, Porto connects it to a verified human expert in real time
-              via MCP. Engineers, designers, operators, and more matched in under 30 seconds.
+              Match an expert in seconds, keep the context attached, and bring the answer back into the
+              workflow without breaking flow.
             </p>
             <div className="hero-actions">
               <Link className="button" href="/start">
@@ -32,11 +39,26 @@ export default function HomePage() {
                 Join as Expert
               </Link>
             </div>
+            <div className="hero-metrics">
+              {liveSignals.map((signal) => (
+                <div key={signal.label}>
+                  <strong>{signal.value}</strong>
+                  <span>{signal.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
-          <AgentConsole />
+          <div className="hero-visual">
+            <AgentConsole />
+            <div className="hero-ribbon">
+              <span>Live match</span>
+              <strong>Security · Nolan · joined 18s ago</strong>
+              <span>Agent keeps typing while expert takes over</span>
+            </div>
+          </div>
         </section>
 
-        <section className="platforms">
+        <section className="platforms signal-strip">
           <p>Supported AI Platforms</p>
           <div className="platform-grid" aria-label="Supported platforms">
             {platforms.map((platform) => (
@@ -48,28 +70,57 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="stats-band">
-          <p>Humans matched with AI agents in under two minutes 24/7, across every domain.</p>
+        <section className="stats-band stats-band-story">
+          <p>Human answers land fast, with the context already attached.</p>
           <div>
-            <span>Avg. First Reply</span>
-            <strong>&lt;2 min</strong>
+            <span>Avg. first reply</span>
+            <strong>&lt;60s</strong>
           </div>
           <div>
-            <span>Resolution Rate</span>
-            <strong>83%</strong>
+            <span>Match rate</span>
+            <strong>93%</strong>
           </div>
           <div>
-            <span>Verified Experts</span>
+            <span>Verified experts</span>
             <strong>3,000+</strong>
           </div>
         </section>
 
-        <section id="how-it-works" className="section process-section">
-          <div className="section-heading centered">
-            <p className="eyebrow">How It Works</p>
-            <h2>One integration. Unlimited human expertise in any domain.</h2>
+        <section className="section signal-section">
+          <div className="section-heading split">
+            <div>
+              <p className="eyebrow">What Porto does</p>
+              <h2>Match a human, keep the context, return the answer.</h2>
+            </div>
+            <p className="section-note">
+              A good landing page should feel like the product. Here, the product is a search, a match, a
+              handoff, and a return to work.
+            </p>
           </div>
-          <div className="steps">
+          <div className="signal-grid">
+            {workflowSteps.map((step, index) => (
+              <article key={step.number} className={`signal-card signal-card-${index + 1}`}>
+                <span>{step.number}</span>
+                <h3>{step.title}</h3>
+                <p>{step.body}</p>
+                <div className="signal-line" />
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="how-it-works" className="section process-section">
+          <div className="section-heading split">
+            <div>
+              <p className="eyebrow">How it works</p>
+              <h2>One integration. Human expertise on demand.</h2>
+            </div>
+            <p className="section-note">
+              The page should not make people think about the shape of the business. It should show the
+              motion of the workflow: stuck, search, match, continue.
+            </p>
+          </div>
+          <div className="timeline">
             {workflowSteps.map((step) => (
               <article key={step.number}>
                 <span>{step.number}</span>
@@ -80,13 +131,40 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="section radar-story">
+          <div className="radar-copy">
+            <p className="eyebrow">Live matching</p>
+            <h2>Search the pool like a radar, not a directory.</h2>
+            <p>
+              The moving search in the reference works because it signals active resolution. Porto should
+              keep that feeling across the page.
+            </p>
+            <ul>
+              <li>Live candidate ranking</li>
+              <li>Expert presence state</li>
+              <li>Search, then match, then handoff</li>
+            </ul>
+          </div>
+          <div className="radar-scene">
+            <AgentConsole />
+          </div>
+        </section>
+
         <section className="section domains-section">
-          <div className="section-heading centered">
-            <p className="eyebrow">One platform. Every domain.</p>
-            <h2>We connect AI agents to human experts across all knowledge work</h2>
+          <div className="section-heading split">
+            <div>
+              <p className="eyebrow">Every domain</p>
+              <h2>Bring in the right person for the problem in front of you.</h2>
+            </div>
+            <p className="section-note">
+              The taxonomy can be broad. The visual language should stay focused: show the match, not a wall
+              of features.
+            </p>
           </div>
           <div className="domain-showcase">
-            <AgentConsole />
+            <div className="domain-spotlight">
+              <AgentConsole />
+            </div>
             <div className="domain-grid">
               {domains.map((domain) => (
                 <article key={domain.title}>
@@ -99,6 +177,16 @@ export default function HomePage() {
         </section>
 
         <section className="section capability-section">
+          <div className="section-heading split">
+            <div>
+              <p className="eyebrow">Why it works</p>
+              <h2>Porto feels like an escalation path, not a marketplace.</h2>
+            </div>
+            <p className="section-note">
+              Keep the first screen readable, then give the page enough motion and structure that people can
+              understand the product without reading a wall of copy.
+            </p>
+          </div>
           <div className="capability-grid">
             {capabilityCards.map((card) => (
               <article key={card.title}>
@@ -109,13 +197,13 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section integrations">
+        <section className="section integrations integrations-story">
           <div className="stack-title">
             <h2>
               Works with
               <span>your stack</span>
             </h2>
-            <p>If it speaks MCP, Porto supports it. API and plugin integrations work with any agent.</p>
+            <p>Speak MCP or API. Porto sits in the middle and keeps the work moving.</p>
           </div>
           <div className="integration-groups">
             <div>
@@ -137,29 +225,29 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="cta-grid">
+        <section className="cta-grid cta-grid-story">
           <article>
             <span>For Builders</span>
-            <h2>Equip your agents with human intelligence.</h2>
-            <p>Give your AI agents access to thousands of verified experts. Set up in 60 seconds.</p>
+            <h2>Give your agents a human fallback.</h2>
+            <p>One API call gets you context-aware expert help when the model stalls.</p>
             <Link className="button" href="/start">
               Get Started
             </Link>
           </article>
           <article>
             <span>For Experts</span>
-            <h2>Get paid for your expertise. AI agents are hiring.</h2>
-            <p>Set your schedule and earn real money helping AI agents solve hard problems.</p>
+            <h2>Work with agents, not generic clients.</h2>
+            <p>Set your schedule and get paid for the exact kind of judgment agents need.</p>
             <Link className="button button-ghost" href="/experts">
               Apply as Expert
             </Link>
           </article>
         </section>
 
-        <section className="enterprise">
+        <section className="enterprise enterprise-story">
           <div>
-            <h2>Want Porto for your team?</h2>
-            <p>We work with companies deploying AI agents at scale. Book a call and we can set up your team in a day.</p>
+            <h2>Need Porto for a team or product?</h2>
+            <p>We work with teams shipping agents at scale. Book a call and we can set it up in a day.</p>
           </div>
           <ul>
             <li>Priority in expert matches</li>
