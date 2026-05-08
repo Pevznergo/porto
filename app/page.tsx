@@ -21,15 +21,14 @@ export default function HomePage() {
               <span>Backed by</span>
               <strong>Y Combinator</strong>
             </div>
-            <p className="eyebrow">Human help for agent work</p>
             <h1>
-              <span>When the agent stalls,</span>
-              <span>Porto finds a human</span>
-              <span>and keeps the thread alive.</span>
+              <span>On demand</span>
+              <span>Human Experts</span>
+              <span>for AI Agents.</span>
             </h1>
             <p className="hero-text">
-              Match an expert in seconds, keep the context attached, and bring the answer back into the
-              workflow without breaking flow.
+              When your AI agent gets stuck, we connect it to a verified human expert in real-time via MCP.
+              Engineers, designers, and more, matched in &lt; 30s.
             </p>
             <div className="hero-actions">
               <Link className="button" href="/start">

@@ -13,7 +13,7 @@ export function Header() {
         Menu
       </label>
       <nav className="nav-links" aria-label="Main navigation">
-        {navItems.slice(0, 3).map((item) => (
+        {navItems.slice(0, 4).map((item) => (
           <Link key={item.href} href={item.href}>
             {item.label}
           </Link>
