@@ -316,18 +316,19 @@ h1 span:nth-child(2) {
 
 .agent-stage {
   position: relative;
-  min-height: 430px;
+  min-height: 610px;
   padding: 18px;
 }
 
 .radar-panel {
   position: absolute;
-  inset: 18px 18px 118px 18px;
+  inset: 16px 16px 88px 16px;
   border: 1px solid rgba(40, 40, 40, .08);
-  border-radius: 20px;
+  border-radius: 26px;
   background:
-    radial-gradient(circle at 50% 45%, rgba(66, 213, 229, .16), transparent 33%),
-    radial-gradient(circle at 35% 20%, rgba(255, 90, 20, .08), transparent 24%),
+    radial-gradient(circle at 50% 82%, rgba(255, 90, 20, .18), transparent 20%),
+    radial-gradient(circle at 50% 45%, rgba(66, 213, 229, .16), transparent 28%),
+    radial-gradient(circle at 28% 18%, rgba(255, 90, 20, .08), transparent 22%),
     linear-gradient(180deg, #fbfbfa 0%, #f4f4f1 100%);
   overflow: hidden;
 }
@@ -341,27 +342,62 @@ h1 span:nth-child(2) {
 }
 
 .radar-orbit-1 {
-  width: 250px;
-  height: 250px;
+  width: 320px;
+  height: 320px;
 }
 
 .radar-orbit-2 {
-  width: 360px;
-  height: 360px;
+  width: 470px;
+  height: 470px;
   border-color: rgba(255, 90, 20, .16);
+}
+
+.radar-orbit-3 {
+  width: 580px;
+  height: 580px;
+  border-color: rgba(0, 0, 0, .05);
+  border-style: dashed;
 }
 
 .radar-sweep {
   position: absolute;
   inset: 50% auto auto 50%;
-  width: 186px;
-  height: 186px;
+  width: 240px;
+  height: 240px;
   transform: translate(-50%, -50%);
   background: conic-gradient(from 25deg, rgba(66, 213, 229, .02), rgba(66, 213, 229, .35), rgba(255, 90, 20, .16), rgba(66, 213, 229, .02));
   border-radius: 50%;
   filter: blur(1px);
-  animation: radar-scan 7s linear infinite;
+  animation: radar-scan 8s linear infinite;
   mix-blend-mode: multiply;
+}
+
+.radar-beam {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 90, 20, .25);
+  box-shadow:
+    0 0 0 28px rgba(255, 90, 20, .07),
+    0 0 0 68px rgba(66, 213, 229, .05);
+  animation: beam-pulse 3.4s ease-in-out infinite;
+}
+
+.radar-beam-a {
+  translate: -84px 42px;
+  animation-delay: -.8s;
+}
+
+.radar-beam-b {
+  translate: 118px -66px;
+  background: rgba(66, 213, 229, .24);
+  box-shadow:
+    0 0 0 28px rgba(66, 213, 229, .07),
+    0 0 0 68px rgba(255, 90, 20, .05);
+  animation-delay: -1.9s;
 }
 
 .radar-core {
@@ -369,13 +405,13 @@ h1 span:nth-child(2) {
   inset: 50% auto auto 50%;
   display: grid;
   place-items: center;
-  width: 166px;
-  height: 166px;
-  padding: 18px;
+  width: 192px;
+  height: 192px;
+  padding: 20px;
   border: 1px solid rgba(0, 0, 0, .08);
   border-radius: 999px;
   background: rgba(255, 255, 255, .82);
-  box-shadow: 0 14px 38px rgba(0, 0, 0, .06);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, .06);
   transform: translate(-50%, -50%);
   text-align: center;
 }
@@ -391,7 +427,7 @@ h1 span:nth-child(2) {
 .radar-core strong {
   max-width: 12ch;
   color: #242426;
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   line-height: 1.08;
 }
 
@@ -408,7 +444,7 @@ h1 span:nth-child(2) {
   background: rgba(255, 255, 255, .9);
   box-shadow: 0 16px 32px rgba(0, 0, 0, .08);
   backdrop-filter: blur(12px);
-  animation: float-card 6s ease-in-out infinite;
+  animation: float-card 6s ease-in-out infinite, card-in 900ms ease-out both;
 }
 
 .candidate-card strong {
@@ -438,21 +474,33 @@ h1 span:nth-child(2) {
 }
 
 .candidate-card-a {
-  top: 14%;
-  left: 8%;
+  top: 16%;
+  left: 10%;
   animation-delay: -1.2s;
 }
 
 .candidate-card-b {
-  top: 18%;
-  right: 10%;
+  top: 17%;
+  right: 12%;
   animation-delay: -3s;
 }
 
 .candidate-card-c {
-  bottom: 16%;
-  left: 18%;
+  bottom: 20%;
+  left: 20%;
   animation-delay: -4.2s;
+}
+
+.candidate-card-d {
+  bottom: 34%;
+  right: 14%;
+  animation-delay: -2.1s;
+}
+
+.candidate-card-e {
+  top: 32%;
+  left: 44%;
+  animation-delay: -5s;
 }
 
 .chat-stream {
@@ -463,6 +511,31 @@ h1 span:nth-child(2) {
   display: grid;
   gap: 10px;
   width: min(520px, 100%);
+}
+
+.match-pill {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 90, 20, .18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .96);
+  color: #2d2d30;
+  font-size: .82rem;
+  font-weight: 760;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .06);
+  animation: pill-pop 900ms ease-out both;
+}
+
+.pulse-mark {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--orange);
+  box-shadow: 0 0 0 6px rgba(255, 90, 20, .11);
 }
 
 .chat-bubble {
@@ -513,6 +586,11 @@ h1 span:nth-child(2) {
   max-width: 360px;
   border-top-left-radius: 6px;
   animation-delay: .32s;
+}
+
+.chat-bubble-followup {
+  justify-self: end;
+  animation-delay: .48s;
 }
 
 .agent-input {
@@ -589,6 +667,18 @@ kbd {
   }
 }
 
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes bubble-rise {
   from {
     opacity: 0;
@@ -598,6 +688,30 @@ kbd {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes pill-pop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes beam-pulse {
+  0%, 100% {
+    opacity: .56;
+    transform: translate(-50%, -50%) scale(.94);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.02);
   }
 }
 
@@ -1206,7 +1320,7 @@ textarea {
   }
 
   .agent-stage {
-    min-height: 320px;
+    min-height: 460px;
     padding: 12px;
   }
 
@@ -1215,18 +1329,23 @@ textarea {
   }
 
   .radar-orbit-1 {
-    width: 180px;
-    height: 180px;
+    width: 210px;
+    height: 210px;
   }
 
   .radar-orbit-2 {
-    width: 270px;
-    height: 270px;
+    width: 320px;
+    height: 320px;
+  }
+
+  .radar-orbit-3 {
+    width: 410px;
+    height: 410px;
   }
 
   .radar-core {
-    width: 136px;
-    height: 136px;
+    width: 150px;
+    height: 150px;
     padding: 12px;
   }
 
@@ -1248,6 +1367,16 @@ textarea {
   .candidate-card-c {
     bottom: 18%;
     left: 6%;
+  }
+
+  .candidate-card-d {
+    bottom: 32%;
+    right: 8%;
+  }
+
+  .candidate-card-e {
+    top: 32%;
+    left: 34%;
   }
 
   .chat-stream {
