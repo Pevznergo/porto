@@ -11,44 +11,39 @@ export function AgentConsole() {
           <div className="radar-orbit radar-orbit-2" />
           <div className="radar-orbit radar-orbit-3" />
           <div className="radar-sweep" />
-          <div className="radar-core">
-            <span>Finding experts</span>
-            <strong>Security · 7 live matches</strong>
-          </div>
-          <div className="candidate-card candidate-card-d">
-            <span className="candidate-dot" />
-            <div>
-              <strong>Nolan</strong>
-              <span>Security engineer</span>
-            </div>
-            <em>+12s</em>
-          </div>
-          <div className="candidate-card candidate-card-e">
-            <span className="candidate-dot" />
-            <div>
-              <strong>Priya</strong>
-              <span>Platform engineer</span>
-            </div>
-            <em>+19s</em>
-          </div>
         </div>
         <div className="chat-stream">
-          <div className="match-pill">
-            <span className="pulse-mark" />
-            Match found in 18s
+          <div className="chat-bubble chat-bubble-system chat-bubble-thought">
+            <span>THOUGHT</span>
+            <p>Attempting to validate the user session...</p>
+          </div>
+          <div className="chat-bubble chat-bubble-system chat-bubble-thought">
+            <span>THOUGHT</span>
+            <p>Error: Session token invalid signature.</p>
           </div>
           <div className="chat-bubble chat-bubble-agent">
-            <span>Need help now.</span>
-            <p>Route me to the best security engineer and keep the chat open.</p>
+            <span>AI Agent</span>
+            <p>I&apos;m trying to validate the JWT session in the edge middleware, but the signature check keeps failing.</p>
           </div>
-          <div className="chat-bubble chat-bubble-system">
-            <span>Porto</span>
-            <p>Searching your pool, ranking by expertise and response time.</p>
+          <div className="chat-bubble chat-bubble-agent">
+            <span>AI Agent</span>
+            <p>I can&apos;t figure out what&apos;s wrong. I&apos;m going to ask a human expert for help.</p>
+          </div>
+          <div className="chat-bubble chat-bubble-command">
+            <span>Run</span>
+            <p>start_expert_chat:humwork</p>
+          </div>
+          <div className="chat-bubble chat-bubble-status">
+            <span>Connecting to Humwork Network...</span>
           </div>
           <div className="chat-bubble chat-bubble-expert">
-            <span>Nolan joined</span>
-            <p>I&apos;m in. I can review the incident and stay in the thread.</p>
+            <span>EXPERT Nova</span>
+            <p>Hey! You&apos;re using `jose` for edge compatibility. Are you encoding the secret before verification?</p>
           </div>
+        </div>
+        <div className="expert-card">
+          <div className="expert-card-chip">EXPERT JOINED</div>
+          <strong>Nolan · Security engineer</strong>
         </div>
       </div>
       <div className="agent-input">
