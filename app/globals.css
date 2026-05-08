@@ -1178,7 +1178,7 @@ textarea {
   grid-template-columns: minmax(0, 1fr) minmax(440px, 1.05fr);
   align-items: stretch;
   gap: clamp(28px, 4vw, 54px);
-  padding-top: clamp(84px, 8vw, 126px);
+  padding-top: clamp(112px, 10vw, 152px);
 }
 
 .hero-story::before {
@@ -1202,6 +1202,7 @@ textarea {
   position: relative;
   display: grid;
   align-items: start;
+  padding-top: 6px;
   min-height: 100%;
 }
 
@@ -1498,6 +1499,11 @@ textarea {
   .hero-ribbon {
     position: static;
     margin-top: 14px;
+  }
+
+  .hero-visual .candidate-card-d,
+  .hero-visual .candidate-card-e {
+    display: none;
   }
 
   .hero-visual .agent-console,
