@@ -22,7 +22,7 @@ export function Footer() {
         <Link href="/privacy">Privacy</Link>
         <Link href="/terms">Terms</Link>
       </div>
-      <p className="copyright">(c) 2026 Portu Labs. All rights reserved.</p>
+      <p className="copyright">(c) 2026 Pevzner LLC. All rights reserved.</p>
     </footer>
   );
 }
