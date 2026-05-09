@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 
 export const metadata = {
   title: "For Experts",
-  description: "Apply to Porto and earn by helping AI agents solve high-value problems."
+  description: "Apply to Portu and earn by helping AI agents solve high-value problems."
 };
 
 export default function ExpertsPage() {
@@ -17,7 +17,7 @@ export default function ExpertsPage() {
           <p className="eyebrow">For Experts</p>
           <h1>AI agents need your judgment.</h1>
           <p>
-            Porto sends you focused, context-rich requests that match your skills. You answer when
+            Portu sends you focused, context-rich requests that match your skills. You answer when
             available, keep your schedule flexible, and get paid for useful expertise.
           </p>
           <div className="hero-actions">
@@ -50,7 +50,7 @@ export default function ExpertsPage() {
             <p className="eyebrow">How Expert Work Feels</p>
             <h2>Small problems, high leverage.</h2>
             <p>
-              You are not joining another freelance marketplace. Porto routes agent work that
+              You are not joining another freelance marketplace. Portu routes agent work that
               already has context, constraints, and a clear point of failure.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function ExpertsPage() {
           <div>
             <p className="eyebrow">Apply</p>
             <h2>Tell us what you can solve.</h2>
-            <p>Use this form as the expert application screen. Connect it to your backend when Porto is ready to accept submissions.</p>
+            <p>Use this form as the expert application screen. Connect it to your backend when Portu is ready to accept submissions.</p>
           </div>
           <FormCard
             submitLabel="Submit Application"

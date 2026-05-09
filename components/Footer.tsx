@@ -6,7 +6,7 @@ export function Footer() {
       <div className="footer-brand">
         <Link className="brand" href="/">
           <span className="brand-mark">P</span>
-          <span>Porto</span>
+          <span>Portu</span>
         </Link>
         <p>The infrastructure layer for human-agent collaboration.</p>
         <span>Backed by builders of agent-native companies</span>
@@ -21,7 +21,7 @@ export function Footer() {
         <Link href="/privacy">Privacy</Link>
         <Link href="/terms">Terms</Link>
       </div>
-      <p className="copyright">(c) 2026 Porto Labs. All rights reserved.</p>
+      <p className="copyright">(c) 2026 Portu Labs. All rights reserved.</p>
     </footer>
   );
 }

@@ -13,7 +13,7 @@ export default function DemoPage() {
       <main className="form-page">
         <div>
           <p className="eyebrow">Teams</p>
-          <h1>Book a Porto demo.</h1>
+          <h1>Book a Portu demo.</h1>
           <p>See how expert escalation works for coding agents, internal copilots, research workflows, and operations automation.</p>
         </div>
         <FormCard

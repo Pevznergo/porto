@@ -35,11 +35,6 @@ export default function HomePage() {
           </div>
           <div className="hero-visual">
             <AgentConsole />
-            <div className="hero-ribbon">
-              <span>Live match</span>
-              <strong>Security · Nolan · joined 18s ago</strong>
-              <span>Agent keeps typing while expert takes over</span>
-            </div>
           </div>
         </section>
 
@@ -60,70 +55,6 @@ export default function HomePage() {
                 <h3>{step.title}</h3>
                 <p>{step.body}</p>
                 <div className="signal-line" />
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section radar-story">
-          <div className="radar-copy">
-            <p className="eyebrow">Live matching</p>
-            <h2>Search the pool like a radar, not a directory.</h2>
-            <p>
-              The moving search in the reference works because it signals active resolution. Porto should
-              keep that feeling across the page.
-            </p>
-            <ul>
-              <li>Live candidate ranking</li>
-              <li>Expert presence state</li>
-              <li>Search, then match, then handoff</li>
-            </ul>
-          </div>
-          <div className="radar-scene">
-            <AgentConsole />
-          </div>
-        </section>
-
-        <section className="section domains-section">
-          <div className="section-heading split">
-            <div>
-              <p className="eyebrow">Verified & Vetted Experts</p>
-              <h2>Every domain, every timezone.</h2>
-            </div>
-            <p className="section-note">
-              Identity-checked experts across engineering, design, strategy, finance, and ops.
-            </p>
-          </div>
-          <div className="domain-showcase">
-            <div className="domain-spotlight">
-              <AgentConsole />
-            </div>
-            <div className="domain-grid">
-              {domains.map((domain) => (
-                <article key={domain.title}>
-                  <h3>{domain.title}</h3>
-                  <p>{domain.body}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section capability-section">
-          <div className="section-heading split">
-            <div>
-              <p className="eyebrow">Plug & Play Integration</p>
-              <h2>Seamless context handoff.</h2>
-            </div>
-            <p className="section-note">
-              One MCP or API call keeps the whole thread intact when the agent needs a human.
-            </p>
-          </div>
-          <div className="capability-grid">
-            {capabilityCards.map((card) => (
-              <article key={card.title}>
-                <h3>{card.title}</h3>
-                <p>{card.body}</p>
               </article>
             ))}
           </div>

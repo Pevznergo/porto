@@ -11,7 +11,7 @@ export default function StartPage() {
       <Header />
       <main className="form-page">
         <div>
-          <p className="eyebrow">Install Porto</p>
+          <p className="eyebrow">Install Portu</p>
           <h1>Start routing agent blockers.</h1>
           <p>Create a workspace, connect MCP or API access, and define which classes of problems should escalate to humans.</p>
         </div>

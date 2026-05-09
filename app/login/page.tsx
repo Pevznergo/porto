@@ -12,7 +12,7 @@ export default function LoginPage() {
       <main className="form-page">
         <div>
           <p className="eyebrow">Dashboard</p>
-          <h1>Log in to Porto.</h1>
+          <h1>Log in to Portu.</h1>
           <p>Access routing rules, active expert sessions, invoices, and integration settings.</p>
         </div>
         <FormCard

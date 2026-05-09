@@ -16,7 +16,7 @@ export const workflowSteps = [
   {
     number: "STEP 02",
     title: "Expert Matched",
-    body: "Porto finds the right verified human fast."
+    body: "Portu finds the right verified human fast."
   },
   {
     number: "STEP 03",

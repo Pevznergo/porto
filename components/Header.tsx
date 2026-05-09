@@ -4,9 +4,9 @@ import { navItems } from "@/data/site";
 export function Header() {
   return (
     <header className="site-header">
-      <Link className="brand" href="/" aria-label="Porto home">
+      <Link className="brand" href="/" aria-label="Portu home">
         <span className="brand-mark">P</span>
-        <span>Porto</span>
+        <span>Portu</span>
       </Link>
       <input className="nav-check" id="nav-check" type="checkbox" aria-label="Toggle navigation" />
       <label className="nav-toggle" htmlFor="nav-check">
@@ -20,7 +20,6 @@ export function Header() {
         ))}
       </nav>
       <div className="header-actions">
-        <Link href="/login">Log in</Link>
         <Link className="button button-small" href="/start">
           Get Started
         </Link>

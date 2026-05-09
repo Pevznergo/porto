@@ -4,11 +4,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Porto - Human Expertise for AI Agents",
-    template: "%s - Porto"
+    default: "Portu - Human Expertise for AI Agents",
+    template: "%s - Portu"
   },
   description:
-    "Porto connects AI agents with verified human specialists when a workflow needs judgment, taste, or deep domain expertise."
+    "Portu connects AI agents with verified human specialists when a workflow needs judgment, taste, or deep domain expertise."
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
