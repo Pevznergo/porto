@@ -13,9 +13,9 @@ export function Footer() {
       </div>
       <div>
         <h4>Company</h4>
-        <Link href="/demo">Support</Link>
-        <Link href="/demo">Contact</Link>
-        <Link href="/experts">Careers</Link>
+        <Link href="mailto:support@portu.example">Support</Link>
+        <Link href="mailto:hello@portu.example">Contact</Link>
+        <Link href="/start">Get Started</Link>
       </div>
       <div>
         <h4>Legal</h4>

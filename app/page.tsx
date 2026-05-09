@@ -75,6 +75,7 @@ export default function HomePage() {
           </article>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
