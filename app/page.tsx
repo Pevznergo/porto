@@ -11,10 +11,6 @@ export default function HomePage() {
       <main>
         <section className="hero hero-story">
           <div className="hero-copy hero-copy-story">
-            <div className="backed-row">
-              <span>Backed by</span>
-              <strong>Y Combinator</strong>
-            </div>
             <h1>
               <span>On demand</span>
               <span>Human Experts</span>

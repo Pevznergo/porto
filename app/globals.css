@@ -178,56 +178,26 @@ p {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(380px, 1.02fr);
-  gap: clamp(32px, 4vw, 56px);
-  align-items: start;
+  grid-template-columns: minmax(0, .94fr) minmax(420px, 1.06fr);
+  gap: clamp(24px, 3vw, 42px);
+  align-items: center;
   width: min(1240px, calc(100% - 48px));
-  min-height: 700px;
+  min-height: 660px;
   margin: 52px auto 0;
-  padding: clamp(60px, 7vw, 104px) clamp(40px, 4.8vw, 72px) 42px;
+  padding: clamp(52px, 6vw, 88px) clamp(36px, 4vw, 64px) 36px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: var(--paper);
-}
-
-.backed-row {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  grid-column: 1;
-  grid-row: 1;
-  justify-self: start;
-  gap: 10px;
-  margin: 0 0 -26px;
-  color: #444;
-  font-size: 1rem;
-}
-
-.backed-row strong {
-  color: var(--orange);
-  font-family: "Courier New", monospace;
-  font-weight: 500;
-}
-
-.backed-row strong::first-letter {
-  padding: 2px 5px;
-  color: white;
-  background: var(--orange);
-  font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 800;
 }
 
 .hero-copy {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-column: 1;
-  grid-row: 2;
   justify-items: start;
   width: 100%;
   min-width: 0;
-  max-width: 590px;
+  max-width: 620px;
   text-align: left;
 }
 
@@ -255,9 +225,9 @@ h1 span:nth-child(2) {
 }
 
 .hero-text {
-  max-width: 575px;
+  max-width: 545px;
   color: #858585;
-  font-size: clamp(1.1rem, 1.45vw, 1.26rem);
+  font-size: clamp(1rem, 1.22vw, 1.14rem);
   line-height: 1.52;
 }
 
@@ -274,11 +244,9 @@ h1 span:nth-child(2) {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-column: 2;
-  grid-row: 1 / span 2;
   grid-template-rows: auto 1fr auto auto;
   width: 100%;
-  min-height: 660px;
+  min-height: 560px;
   border: 4px solid transparent;
   border-radius: 10px;
   background:
@@ -316,8 +284,8 @@ h1 span:nth-child(2) {
 
 .agent-stage {
   position: relative;
-  min-height: 610px;
-  padding: 18px;
+  min-height: 510px;
+  padding: 16px;
 }
 
 .radar-panel {
@@ -374,14 +342,14 @@ h1 span:nth-child(2) {
 
 .chat-stream {
   position: absolute;
-  top: 22px;
-  right: 22px;
-  bottom: 114px;
-  left: 22px;
+  top: 18px;
+  right: 18px;
+  bottom: 96px;
+  left: 18px;
   display: grid;
   align-content: start;
-  gap: 10px;
-  width: min(460px, 100%);
+  gap: 8px;
+  width: min(440px, 100%);
 }
 
 .chat-bubble {
@@ -465,8 +433,8 @@ h1 span:nth-child(2) {
 
 .expert-card {
   position: absolute;
-  right: 24px;
-  top: 78px;
+  right: 18px;
+  top: 72px;
   display: grid;
   gap: 6px;
   padding: 12px 14px;
@@ -1274,7 +1242,7 @@ textarea {
     margin: 84px auto 0;
     padding: 28px 18px 20px;
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
     overflow: hidden;
   }
 
