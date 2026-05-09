@@ -18,6 +18,10 @@ export default function DemoPage() {
         </div>
         <FormCard
           submitLabel="Request Demo"
+          title="Select a Date & Time"
+          eyebrow="Humwork Demo"
+          summary="Book a 15 minute call to see the workflow live."
+          note="We’ll share conferencing details after confirmation."
           fields={[
             { label: "Work email", name: "email", type: "email", placeholder: "you@company.com" },
             { label: "Company", name: "company", placeholder: "Company name" },

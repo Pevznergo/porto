@@ -17,6 +17,10 @@ export default function StartPage() {
         </div>
         <FormCard
           submitLabel="Create Workspace"
+          title="Create Workspace"
+          eyebrow="Install Portu"
+          summary="Set up a workspace to route agent blockers to humans."
+          note="Connect MCP or API access and define escalation rules in a few minutes."
           fields={[
             { label: "Name", name: "name", autocomplete: "name", placeholder: "Mira Chen" },
             { label: "Work email", name: "email", type: "email", autocomplete: "email", placeholder: "mira@company.com" },

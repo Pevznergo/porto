@@ -8,11 +8,12 @@ export function Footer() {
           <span className="brand-mark">P</span>
           <span>Portu</span>
         </Link>
-        <p>The infrastructure layer for human-agent collaboration.</p>
+        <p>The infrastructure layer for human-agent collaboration. Built for the future of work.</p>
         <span>Backed by builders of agent-native companies</span>
       </div>
       <div>
         <h4>Company</h4>
+        <Link href="/demo">Support</Link>
         <Link href="/demo">Contact</Link>
         <Link href="/experts">Careers</Link>
       </div>
