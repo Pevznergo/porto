@@ -1116,7 +1116,7 @@ textarea {
 
 .auth-card {
   display: grid;
-  grid-template-columns: minmax(620px, 1.1fr) minmax(420px, .9fr);
+  grid-template-columns: minmax(560px, 1fr) minmax(420px, .85fr);
   min-height: calc(100vh - 92px);
   border: 1px solid #dfdfdc;
   border-radius: 48px;
@@ -1128,15 +1128,15 @@ textarea {
   display: grid;
   justify-items: center;
   align-content: start;
-  padding: 92px 72px 70px;
+  padding: 72px 56px 56px;
   text-align: center;
 }
 
 .auth-avatar {
   position: relative;
-  width: 116px;
-  height: 116px;
-  margin-bottom: 26px;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
   border: 2px solid #d9d9d6;
   border-radius: 50%;
 }
@@ -1151,27 +1151,29 @@ textarea {
 }
 
 .auth-avatar span {
-  top: 28px;
-  width: 36px;
-  height: 36px;
+  top: 22px;
+  width: 30px;
+  height: 30px;
 }
 
 .auth-avatar i {
-  bottom: 10px;
-  width: 66px;
-  height: 40px;
+  bottom: 8px;
+  width: 56px;
+  height: 34px;
 }
 
 .auth-left h1 {
-  margin-bottom: 12px;
-  font-size: clamp(2rem, 2.6vw, 3.15rem);
-  line-height: 1.04;
+  max-width: 16ch;
+  margin-bottom: 10px;
+  font-size: clamp(2.2rem, 2.8vw, 3rem);
+  line-height: 1.02;
 }
 
 .auth-subtitle {
-  margin-bottom: 38px;
+  max-width: 34ch;
+  margin-bottom: 30px;
   color: #7d7d79;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .auth-google {
@@ -1180,14 +1182,14 @@ textarea {
   justify-content: center;
   gap: 18px;
   width: min(100%, 760px);
-  min-height: 76px;
-  padding: 0 24px;
+  min-height: 64px;
+  padding: 0 20px;
   border: 1px solid #d5d5d2;
   border-radius: 14px;
   color: #202020;
   background: white;
   box-shadow: 0 2px 6px rgba(0, 0, 0, .04);
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 760;
 }
 
@@ -1203,35 +1205,35 @@ textarea {
 .auth-divider {
   width: min(100%, 760px);
   height: 1px;
-  margin: 36px 0 28px;
+  margin: 28px 0 22px;
   background: #dededa;
 }
 
 .auth-form {
   display: grid;
-  gap: 18px;
+  gap: 14px;
   width: min(100%, 760px);
   text-align: left;
 }
 
 .auth-form label {
   display: grid;
-  gap: 8px;
+  gap: 6px;
   color: #777;
-  font-size: 1.15rem;
+  font-size: .95rem;
   font-weight: 760;
 }
 
 .auth-form input {
   width: 100%;
-  min-height: 78px;
-  padding: 0 22px;
+  min-height: 60px;
+  padding: 0 18px;
   border: 1px solid #d5d5d2;
-  border-radius: 16px;
+  border-radius: 14px;
   color: #252525;
   background: white;
   font: inherit;
-  font-size: 1.08rem;
+  font-size: 1rem;
   outline: none;
   box-shadow: 0 3px 7px rgba(0, 0, 0, .04);
 }
@@ -1243,20 +1245,20 @@ textarea {
 .auth-password span {
   position: absolute;
   top: 50%;
-  right: 18px;
+  right: 14px;
   transform: translateY(-50%);
   color: #8f8f8b;
   font-size: 1.2rem;
 }
 
 .auth-submit {
-  min-height: 68px;
-  margin-top: 8px;
+  min-height: 58px;
+  margin-top: 6px;
   border: 0;
-  border-radius: 16px;
+  border-radius: 14px;
   color: white;
   background: var(--orange);
-  font-size: 1.06rem;
+  font-size: 1rem;
   font-weight: 800;
   box-shadow: 0 14px 28px rgba(255, 90, 20, .28);
 }
@@ -1274,7 +1276,7 @@ textarea {
 .auth-visual {
   display: grid;
   align-content: space-between;
-  padding: 48px 44px 50px;
+  padding: 44px 40px 44px;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, .04) 1px, transparent 1px) center/72px 72px,
     linear-gradient(0deg, rgba(0, 0, 0, .04) 1px, transparent 1px) center/72px 72px,
@@ -1284,26 +1286,27 @@ textarea {
 .auth-visual-brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   color: #111;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 800;
 }
 
 .auth-visual-brand .brand-mark {
-  width: 72px;
-  height: 72px;
-  border-radius: 18px;
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
   color: white;
   background: #111;
-  font-size: 2.2rem;
+  font-size: 1.7rem;
 }
 
 .auth-visual-art {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 620px;
+  min-height: 520px;
+  margin-top: 8px;
 }
 
 .auth-visual-glow {
@@ -1317,8 +1320,8 @@ textarea {
 
 .auth-visual-node {
   display: grid;
-  width: 164px;
-  height: 164px;
+  width: 144px;
+  height: 144px;
   place-items: center;
   border-radius: 50%;
   color: white;
@@ -1327,30 +1330,31 @@ textarea {
 }
 
 .auth-visual-node span {
-  font-size: 4.8rem;
+  font-size: 4rem;
   font-weight: 900;
   letter-spacing: -.08em;
 }
 
 .auth-visual-copy h2 {
   max-width: 440px;
-  margin-bottom: 12px;
-  font-size: clamp(2rem, 2.2vw, 3.35rem);
+  margin: 0 0 14px;
+  font-size: clamp(1.8rem, 2vw, 3rem);
   line-height: .98;
 }
 
 .auth-visual-copy p {
   max-width: 470px;
-  font-size: 1.15rem;
+  margin-bottom: 26px;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
 .auth-logos {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  gap: 18px 22px;
+  gap: 16px 20px;
   color: #b1b1ad;
-  font-size: 1.02rem;
+  font-size: .95rem;
   font-weight: 760;
 }
 
@@ -1504,7 +1508,7 @@ textarea {
   }
 
   .auth-visual {
-    min-height: 520px;
+    min-height: 460px;
   }
 
   .booking-card,
@@ -1680,8 +1684,8 @@ textarea {
   }
 
   .auth-left {
-    padding-top: 56px;
-    padding-bottom: 46px;
+    padding-top: 44px;
+    padding-bottom: 34px;
   }
 
   .auth-google,
@@ -1691,11 +1695,29 @@ textarea {
   }
 
   .auth-visual-art {
-    min-height: 340px;
+    min-height: 280px;
   }
 
   .auth-logos {
     grid-template-columns: repeat(2, max-content);
+  }
+
+  .auth-visual-copy h2 {
+    max-width: 100%;
+    font-size: clamp(1.55rem, 7vw, 2.2rem);
+  }
+
+  .auth-visual-copy p {
+    font-size: .98rem;
+  }
+
+  .auth-visual-node {
+    width: 120px;
+    height: 120px;
+  }
+
+  .auth-visual-node span {
+    font-size: 3.2rem;
   }
 
   .booking-eyebrow {

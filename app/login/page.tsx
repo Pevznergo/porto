@@ -28,20 +28,13 @@ export default function LoginPage() {
 
             <form className="auth-form">
               <label>
-                Email Address
+                Email address
                 <input type="email" placeholder="you@example.com" autoComplete="email" />
               </label>
               <label>
                 Password
                 <div className="auth-password">
-                  <input type="password" placeholder="Enter your Password" autoComplete="new-password" />
-                  <span aria-hidden="true">◔</span>
-                </div>
-              </label>
-              <label>
-                Confirm Password
-                <div className="auth-password">
-                  <input type="password" placeholder="Confirm your password" autoComplete="new-password" />
+                  <input type="password" placeholder="Enter your password" autoComplete="current-password" />
                   <span aria-hidden="true">◔</span>
                 </div>
               </label>
@@ -68,7 +61,7 @@ export default function LoginPage() {
             </div>
             <div className="auth-visual-copy">
               <h2>Connect your AI agents with human experts</h2>
-              <p>Real-time access to verified experts when your AI need human expertise. Get unstuck faster</p>
+              <p>Real-time access to verified experts when your AI needs human expertise. Get unstuck faster.</p>
             </div>
             <div className="auth-logos" aria-hidden="true">
               <span>Claude Code</span>
