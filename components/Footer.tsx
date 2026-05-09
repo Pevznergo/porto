@@ -15,7 +15,7 @@ export function Footer() {
         <h4>Company</h4>
         <Link href="mailto:support@portu.example">Support</Link>
         <Link href="mailto:hello@portu.example">Contact</Link>
-        <Link href="/start">Get Started</Link>
+        <Link href="/login">Get Started</Link>
       </div>
       <div>
         <h4>Legal</h4>

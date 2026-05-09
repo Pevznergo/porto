@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Option = {
   label: string;
   value?: string;
@@ -11,6 +13,7 @@ type Field =
 type FormCardProps = {
   fields: Field[];
   submitLabel: string;
+  submitHref?: string;
   secondary?: {
     href: string;
     label: string;
@@ -21,7 +24,7 @@ type FormCardProps = {
   note?: string;
 };
 
-export function FormCard({ fields, submitLabel, secondary, title, eyebrow, summary, note }: FormCardProps) {
+export function FormCard({ fields, submitLabel, submitHref, secondary, title, eyebrow, summary, note }: FormCardProps) {
   return (
     <section className="booking-card">
       <div className="booking-left">
@@ -65,13 +68,19 @@ export function FormCard({ fields, submitLabel, secondary, title, eyebrow, summa
           </label>
         ))}
         <div className="form-actions">
-          <button className="button" type="button">
-            {submitLabel}
-          </button>
+          {submitHref ? (
+            <Link className="button" href={submitHref}>
+              {submitLabel}
+            </Link>
+          ) : (
+            <button className="button" type="button">
+              {submitLabel}
+            </button>
+          )}
           {secondary ? (
-            <a className="button button-ghost" href={secondary.href}>
+            <Link className="button button-ghost" href={secondary.href}>
               {secondary.label}
-            </a>
+            </Link>
           ) : null}
         </div>
       </form>

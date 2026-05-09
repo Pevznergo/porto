@@ -18,6 +18,8 @@ export default function DemoPage() {
         </div>
         <FormCard
           submitLabel="Request Demo"
+          submitHref="/login"
+          secondary={{ href: "/login", label: "Go to Login" }}
           title="Select a Date & Time"
           eyebrow="Humwork Demo"
           summary="Book a 15 minute call to see the workflow live."
