@@ -21,7 +21,7 @@ export default function DemoPage() {
           submitHref="/register"
           secondary={{ href: "/login", label: "Go to Login" }}
           title="Select a Date & Time"
-          eyebrow="Humwork Demo"
+          eyebrow="Portu Demo"
           summary="Book a 15 minute call to see the workflow live."
           note="We’ll share conferencing details after confirmation."
           fields={[

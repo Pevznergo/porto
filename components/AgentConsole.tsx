@@ -22,7 +22,7 @@ export function AgentConsole() {
           </div>
           <div className="chat-bubble chat-bubble-command" style={{ animationDelay: "2.05s" }}>
             <span>Run</span>
-            <p>start_expert_chat:humwork</p>
+            <p>start_expert_chat:portu</p>
           </div>
           <div className="chat-bubble chat-bubble-status" style={{ animationDelay: "2.9s" }}>
             <span>Connecting to Human Network...</span>
