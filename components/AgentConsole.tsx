@@ -25,7 +25,7 @@ export function AgentConsole() {
             <p>start_expert_chat:portu</p>
           </div>
           <div className="chat-bubble chat-bubble-status" style={{ animationDelay: "2.9s" }}>
-            <span>Connecting to Human Network...</span>
+            <span>Connecting to Portu Network...</span>
           </div>
           <div className="chat-bubble chat-bubble-expert" style={{ animationDelay: "3.8s" }}>
             <span>EXPERT</span>
