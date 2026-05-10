@@ -70,7 +70,7 @@ export default function TermsPage() {
 
         <h2>10. Contact</h2>
         <p>
-          Questions about these Terms can be sent to <a href="mailto:legal@portu.example">legal@portu.example</a>.
+          Questions about these Terms can be sent to <a href="mailto:at@portu.uk">at@portu.uk</a>.
         </p>
       </main>
       <Footer />

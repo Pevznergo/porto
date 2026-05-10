@@ -58,7 +58,7 @@ export default function PrivacyPage() {
         <h2>7. Your Choices</h2>
         <p>
           Where applicable law provides those rights, you may request access, correction, deletion, export, or
-          restriction of your information. Contact <a href="mailto:privacy@portu.example">privacy@portu.example</a> for
+          restriction of your information. Contact <a href="mailto:at@portu.uk">at@portu.uk</a> for
           privacy requests.
         </p>
 

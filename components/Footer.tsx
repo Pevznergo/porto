@@ -13,8 +13,8 @@ export function Footer() {
       </div>
       <div>
         <h4>Company</h4>
-        <Link href="mailto:support@portu.example">Support</Link>
-        <Link href="mailto:hello@portu.example">Contact</Link>
+        <Link href="mailto:at@portu.uk">Support</Link>
+        <Link href="mailto:at@portu.uk">Contact</Link>
         <Link href="/register">Get Started</Link>
       </div>
       <div>
