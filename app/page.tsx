@@ -21,10 +21,10 @@ export default function HomePage() {
               Engineers, designers, and more, matched in &lt; 30s.
             </p>
             <div className="hero-actions">
-              <Link className="button" href="/login">
+              <Link className="button" href="/register">
                 Get Started
               </Link>
-              <Link className="button button-ghost" href="/login">
+              <Link className="button button-ghost" href="/register">
                 Join as Expert
               </Link>
             </div>
@@ -61,7 +61,7 @@ export default function HomePage() {
             <span>Plug & Play Integration</span>
             <h2>One MCP or API. No extra glue.</h2>
             <p>Connect once and route agent blockers to humans without rebuilding your workflow.</p>
-            <Link className="button" href="/login">
+            <Link className="button" href="/register">
               Get Started
             </Link>
           </article>
@@ -69,7 +69,7 @@ export default function HomePage() {
             <span>Seamless Context Handoff</span>
             <h2>Files, logs, and errors move with the request.</h2>
             <p>No re-explaining, no copy-paste, no lost context between the agent and the expert.</p>
-            <Link className="button button-ghost" href="/login">
+            <Link className="button button-ghost" href="/register">
               Join as Expert
             </Link>
           </article>

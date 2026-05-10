@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { AuthForm } from "@/components/AuthForm";
 import { Header } from "@/components/Header";
 
 export const metadata = {
@@ -11,69 +11,39 @@ export default function LoginPage() {
       <Header />
       <main className="auth-shell">
         <section className="auth-card">
-          <div className="auth-left">
-            <div className="auth-avatar" aria-hidden="true">
-              <span />
-              <i />
-            </div>
-            <h1>Create an account</h1>
-            <p className="auth-subtitle">Get started with Portu</p>
-
-            <button className="auth-google" type="button">
-              <span className="auth-google-mark">G</span>
-              <span>Sign Up With Google</span>
-            </button>
-
-            <div className="auth-divider" aria-hidden="true" />
-
-            <form className="auth-form">
-              <label>
-                Email address
-                <input type="email" placeholder="you@example.com" autoComplete="email" />
-              </label>
-              <label>
-                Password
-                <div className="auth-password">
-                  <input type="password" placeholder="Enter your password" autoComplete="current-password" />
-                  <span aria-hidden="true">◔</span>
-                </div>
-              </label>
-              <button className="auth-submit" type="button">
-                Create Account
-              </button>
-            </form>
-
-            <p className="auth-footer">
-              Already have an account? <Link href="/login">Sign In</Link>
-            </p>
-          </div>
-
-          <aside className="auth-visual" aria-label="Portu illustration">
-            <div className="auth-visual-brand">
-              <span className="brand-mark">P</span>
-              <span>Portu</span>
-            </div>
-            <div className="auth-visual-art">
-              <div className="auth-visual-glow" />
-              <div className="auth-visual-node">
-                <span>Pt</span>
-              </div>
-            </div>
-            <div className="auth-visual-copy">
-              <h2>Connect your AI agents with human experts</h2>
-              <p>Real-time access to verified experts when your AI needs human expertise. Get unstuck faster.</p>
-            </div>
-            <div className="auth-logos" aria-hidden="true">
-              <span>Claude Code</span>
-              <span>OpenClaw</span>
-              <span>Codex</span>
-              <span>Lovable</span>
-              <span>Cursor</span>
-              <span>Cline</span>
-            </div>
-          </aside>
+          <AuthForm mode="login" />
+          <AuthVisual />
         </section>
       </main>
     </>
+  );
+}
+
+function AuthVisual() {
+  return (
+    <aside className="auth-visual" aria-label="Portu workspace preview">
+      <div className="auth-visual-brand">
+        <span className="brand-mark">P</span>
+        <span>Portu</span>
+      </div>
+      <div className="auth-visual-art">
+        <div className="auth-visual-glow" />
+        <div className="auth-visual-node">
+          <span>Pt</span>
+        </div>
+      </div>
+      <div className="auth-visual-copy">
+        <h2>Human experts inside your agent workflow</h2>
+        <p>Open the dashboard, route stuck agent tasks, and see live expert coverage.</p>
+      </div>
+      <div className="auth-logos" aria-hidden="true">
+        <span>Claude Code</span>
+        <span>OpenClaw</span>
+        <span>Codex</span>
+        <span>Lovable</span>
+        <span>Cursor</span>
+        <span>Cline</span>
+      </div>
+    </aside>
   );
 }

@@ -21,7 +21,7 @@ export default function ExpertsPage() {
             available, keep your schedule flexible, and get paid for useful expertise.
           </p>
           <div className="hero-actions">
-            <Link className="button" href="/login">
+            <Link className="button" href="/register">
               Apply as Expert
             </Link>
             <Link className="button button-ghost" href="/#how-it-works">

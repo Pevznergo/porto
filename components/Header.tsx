@@ -20,7 +20,7 @@ export function Header() {
         ))}
       </nav>
       <div className="header-actions">
-        <Link className="button button-small" href="/login">
+        <Link className="button button-small" href="/register">
           Get Started
         </Link>
       </div>

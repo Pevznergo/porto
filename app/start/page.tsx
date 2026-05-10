@@ -5,5 +5,5 @@ export const metadata = {
 };
 
 export default function StartPage() {
-  redirect("/login");
+  redirect("/register");
 }

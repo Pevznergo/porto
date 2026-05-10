@@ -2,7 +2,7 @@ export const navItems = [
   { href: "/#how-it-works", label: "How It Works" },
   { href: "/experts", label: "For Experts" },
   { href: "/demo", label: "Book Demo" },
-  { href: "/login", label: "Log in" }
+  { href: "/dashboard", label: "Dashboard" }
 ];
 
 export const platforms = ["Claude Code", "OpenClaw", "Codex", "Lovable", "Cursor", "Cowork"];
